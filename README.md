@@ -29,7 +29,7 @@ Using this marked locations we got the daily footfall data for each of these 9 c
 
 ## Benchmark ARIMA model 
 
-<img src= "Plots/arima.png">
+<img src= "Plots/arima.png" width = '500'>
 
 STEP 1) Difference the Series to achieve Stationarity  
 STEP 2) Split the data into train and test set (90:10)
@@ -60,14 +60,14 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 
 ### Linear Regression Model 
 
-<img src= "Plots/Cumulative Returns and Weighted Returns.png">
+<img src= "Plots/Price_prediction/Linear Regression Price Prediction (3).png"  width = '500'>
 
 - Train Data gives a MSE of 0.089 and Test data gives a MSE of 0.35. 
 - So, the linear regression model is overfitting the train data. 
 
 
 ### Lasso Model 
-<img src= "Plots/Cumulative Returns and Weighted Returns.png">
+<img src= "Plots/Price_prediction/Lasso Model Price Prediction with alpha = 0.0028  (1).png" width = '500'>
 
 - The Lasso model was an improvement over linear regression model in terms of similarity in performance across train and test data. But it still has a R squared value close to 0.5 This suggests that there is some non linearity in the data which the Lasso model is not able to capture. 
 - It has a marginal improvement over LR model.
@@ -87,7 +87,7 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 
 
 ### Long Only Trading Strategy 
-<img src= "Plots/NNTS.png">
+<img src= "Plots/NNTS.png"  width = '500'>
 
 - After building the model , I implemented the trading strategy and this is the graph of the long only trading strategy I used. 
 - Here in the graph the blue line is the Close price and Orange line is the open price. 
@@ -95,7 +95,7 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 - Here You can see that the prediction is right in some places where we buy low and sell high and it is wrong in some places. 
 
 ## Results 
-<img src= "Images/results.png">
+<img src= "Plots/results.png"  width = '500'>
 
 - Out of the LR , lasso and NN models I see that the NN model has the highest adjusted R squared value of 0.76 and lowest MSE of 0.05. It also gives a 9.6% returns on the long only trading strategy. The Lasso model also does well with similar returns of 9.1% and has the benefit of better explainability than the blackbox NN model. 
 
