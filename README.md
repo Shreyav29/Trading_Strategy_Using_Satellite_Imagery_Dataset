@@ -12,7 +12,7 @@ Is it possible to use Satellite Imagery data to predict the stock price movement
 - The business value of the project is that if we use the geolocation data correctly, it can help traders get ahead of the market and achieve superior returns 
 
 ## Data Collection 
-<img src= "Plots/data.png" width = '500'>
+<img src= "Plots/data.png" width = '400'>
 The satellite data that we can get is limited to 2.5 yrs and is mainly focused on the united states and Europe geographies. 
 So with regards to this constraint, I chose a stock called Boyd Corporation which did not have any major offshore operations. I did this because I did not want other macroeconomic or geopolitical factors to effect the stock movement. 
 
@@ -29,7 +29,7 @@ Using this marked locations we got the daily footfall data for each of these 9 c
 
 ## Benchmark ARIMA model 
 
-<img src= "Plots/arima.png" width = '600'>
+<img src= "Plots/arima.png" width = '700'>
 
 STEP 1) Difference the Series to achieve Stationarity  
 STEP 2) Split the data into train and test set (90:10)
@@ -51,7 +51,7 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 
 ### Feature Engineering / Feature Scaling 
 
-<img src= "Plots/feature eng.png"  width = '500'>
+<img src= "Plots/feature eng.png"  width = '600'>
 
 - My idea is to use the past 7 days data of footfall and technical indicators to predict stock price movement on the 8th day. So I created a input feature vector of size 22 by stacking the past 7 days of footfall data and past 5 days of the three technical indicators values. 
 - Here you can see 7 days of footfall data but only 5 days ot technical indicator values because footfall is collected even on weekends, but we don’t have stock price data for weekends
@@ -87,7 +87,7 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 
 
 ### Long Only Trading Strategy 
-<img src= "Plots/NNTS.png"  width = '600'>
+<img src= "Plots/NNTS.png"  width = '700'>
 
 - After building the model , I implemented the trading strategy and this is the graph of the long only trading strategy I used. 
 - Here in the graph the blue line is the Close price and Orange line is the open price. 
@@ -95,7 +95,7 @@ In the technical indicators , MACD is a lagging indicator which estimates the tr
 - Here You can see that the prediction is right in some places where we buy low and sell high and it is wrong in some places. 
 
 ## Results 
-<img src= "Plots/results.png"  width = '600'>
+<img src= "Plots/results.png"  width = '700'>
 
 - Out of the LR , lasso and NN models I see that the NN model has the highest adjusted R squared value of 0.76 and lowest MSE of 0.05. It also gives a 9.6% returns on the long only trading strategy. The Lasso model also does well with similar returns of 9.1% and has the benefit of better explainability than the blackbox NN model. 
 
