@@ -22,7 +22,7 @@ Then I researched about the 9 casinos under Boyd corporation and marked them on 
 Using this marked locations we got the daily footfall data for each of these 9 casinos from the Kayrros platform and this is how the data looks. We have the date and the footfall of each casino on each day. 
 
 ## EDA 
-<img src= "Plots/Cumulative Returns and Weighted Returns.png">
+<img src= "Plots/eda.png">
 
 - This graph shows the time series plot of the Stock price and daily footfall data. It is observed that there is a 0.58 correlation between the stock and footfall. 
 - Although its not high , going with the intuition that the footfall can effect the stock , we want to epxplore the issue further. 
