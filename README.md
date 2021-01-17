@@ -31,10 +31,14 @@ Using this marked locations we got the daily footfall data for each of these 9 c
 
 <img src= "Plots/arima.png" width = '700'>
 
-STEP 1) Difference the Series to achieve Stationarity  
+STEP 1) Difference the Series to achieve Stationarity
+
 STEP 2) Split the data into train and test set (90:10)
+
 STEP 3) Implementing the appropriate ARIMA(3,1,3) model
+
 STEP 4) Residual Analysis 
+
 STEP 5) Long Only Trading Strategy 
 
 ## Machine Learning Models 
