@@ -3,6 +3,7 @@
 ## Short Description of the project   
 We collected the satellite imagery data for a casino industry stock and created a neural networks based stock price prediction model using the change in footfall at the casinos. This model resulted in a 0.05 mean squared error and 0.75 ajusted R squared. In a long only trading strategy, the monthly reurns turn out to be 9.6% with a 2.1 sharpe ratio. 
 
+
 ## Problem Statement 
 Is it possible to use Satellite Imagery data to predict the stock price movement of a casino industry stock ? 
 
